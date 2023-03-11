@@ -31,7 +31,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
+                                                    <img src="admin/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
                                                     <h6 class="mb-0 text-sm">John Michael</h6>
@@ -61,7 +61,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="img/team-3.jpg" class="avatar avatar-sm me-3" alt="user2">
+                                                    <img src="admin/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user2">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
                                                     <h6 class="mb-0 text-sm">Alexa Liras</h6>
@@ -91,7 +91,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="img/team-4.jpg" class="avatar avatar-sm me-3" alt="user3">
+                                                    <img src="admin/img/team-4.jpg" class="avatar avatar-sm me-3" alt="user3">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
                                                     <h6 class="mb-0 text-sm">Laurent Perrier</h6>
@@ -121,7 +121,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="img/team-3.jpg" class="avatar avatar-sm me-3" alt="user4">
+                                                    <img src="admin/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user4">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
                                                     <h6 class="mb-0 text-sm">Michael Levi</h6>
@@ -151,7 +151,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="img/team-2.jpg" class="avatar avatar-sm me-3" alt="user5">
+                                                    <img src="admin/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user5">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
                                                     <h6 class="mb-0 text-sm">Richard Gran</h6>
@@ -181,7 +181,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="img/team-4.jpg" class="avatar avatar-sm me-3"
+                                                    <img src="admin/img/team-4.jpg" class="avatar avatar-sm me-3"
                                                         alt="user6">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
@@ -245,7 +245,7 @@
                                         <td>
                                             <div class="d-flex px-2">
                                                 <div>
-                                                    <img src="img/small-logos/logo-spotify.svg"
+                                                    <img src="admin/img/small-logos/logo-spotify.svg"
                                                         class="avatar avatar-sm rounded-circle me-2" alt="spotify">
                                                 </div>
                                                 <div class="my-auto">
@@ -281,7 +281,7 @@
                                         <td>
                                             <div class="d-flex px-2">
                                                 <div>
-                                                    <img src="img/small-logos/logo-invision.svg"
+                                                    <img src="admin/img/small-logos/logo-invision.svg"
                                                         class="avatar avatar-sm rounded-circle me-2" alt="invision">
                                                 </div>
                                                 <div class="my-auto">
@@ -318,7 +318,7 @@
                                         <td>
                                             <div class="d-flex px-2">
                                                 <div>
-                                                    <img src="img/small-logos/logo-jira.svg"
+                                                    <img src="admin/img/small-logos/logo-jira.svg"
                                                         class="avatar avatar-sm rounded-circle me-2" alt="jira">
                                                 </div>
                                                 <div class="my-auto">
@@ -355,7 +355,7 @@
                                         <td>
                                             <div class="d-flex px-2">
                                                 <div>
-                                                    <img src="img/small-logos/logo-slack.svg"
+                                                    <img src="admin/img/small-logos/logo-slack.svg"
                                                         class="avatar avatar-sm rounded-circle me-2" alt="slack">
                                                 </div>
                                                 <div class="my-auto">
@@ -392,7 +392,7 @@
                                         <td>
                                             <div class="d-flex px-2">
                                                 <div>
-                                                    <img src="img/small-logos/logo-webdev.svg"
+                                                    <img src="admin/img/small-logos/logo-webdev.svg"
                                                         class="avatar avatar-sm rounded-circle me-2" alt="webdev">
                                                 </div>
                                                 <div class="my-auto">
@@ -429,7 +429,7 @@
                                         <td>
                                             <div class="d-flex px-2">
                                                 <div>
-                                                    <img src="img/small-logos/logo-xd.svg"
+                                                    <img src="admin/img/small-logos/logo-xd.svg"
                                                         class="avatar avatar-sm rounded-circle me-2" alt="xd">
                                                 </div>
                                                 <div class="my-auto">

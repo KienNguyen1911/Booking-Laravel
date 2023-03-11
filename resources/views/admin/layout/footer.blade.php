@@ -1,8 +1,8 @@
-<script src="js/core/popper.min.js"></script>
-<script src="js/core/bootstrap.min.js"></script>
-<script src="js/plugins/perfect-scrollbar.min.js"></script>
-<script src="js/plugins/smooth-scrollbar.min.js"></script>
-<script src="js/plugins/chartjs.min.js"></script>
+<script src="admin/js/core/popper.min.js"></script>
+<script src="admin/js/core/bootstrap.min.js"></script>
+<script src="admin/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="admin/js/plugins/smooth-scrollbar.min.js"></script>
+<script src="admin/js/plugins/chartjs.min.js"></script>
 <script>
     var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -185,4 +185,4 @@
 <!-- Github buttons -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+<script src="admin/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
