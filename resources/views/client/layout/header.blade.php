@@ -1,3 +1,11 @@
+<style>
+    .active {
+        border: 1px solid white;
+        /* border-color: #007bff; */
+        border-radius: 8px;
+    }
+</style>
+
 <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close">
@@ -13,7 +21,7 @@
             <a href="/" class="logo m-0">Tour <span class="text-primary">.</span></a>
 
             <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-                <li class="active"><a href="/">Home</a></li>
+                <li @class(['active' => request()->routeIs('index')])><a href="/">Home</a></li>
                 {{-- <li class="has-children">
                     <a href="#">Dropdown</a>
                     <ul class="dropdown">
@@ -30,10 +38,18 @@
                         <li><a href="#">Menu Three</a></li>
                     </ul>
                 </li> --}}
-                <li><a href="/services">Services</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-                <li><a href="/login">Login</a></li>
+                <li @class(['active' => request()->routeIs('services')])>
+                    <x-nav-link :href="route('services')" >Services</x-nav-link>
+                </li>
+                <li @class(['active' => request()->routeIs('about')])>
+                    <x-nav-link :href="route('about')" >About</x-nav-link>
+                </li>
+                <li @class(['active' => request()->routeIs('contact')])>
+                    <x-nav-link :href="route('contact')" >Contact Us</x-nav-link>
+                </li>
+                <li>
+                    <x-nav-link :href="route('login')">Login</x-nav-link>
+                </li>
             </ul>
 
             <a href="#"
