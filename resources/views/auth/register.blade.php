@@ -1,7 +1,25 @@
 @extends('auth.form')
 
 @section('register')
+    <style>
+        .alert {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+    </style>
+    @error('field')
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <span class="alert-icon text-white"><i class="ni ni-like-2"></i></span>
+            <span class="alert-text text-white"><strong>Danger!</strong> Register failed, Please try again!!!</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @enderror
     <main class="main-content  mt-0">
+
         <section class="min-vh-100 mb-8">
             <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
                 style="background-image: url('admin/img/curved-images/curved14.jpg');">
@@ -16,6 +34,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="container">
                 <div class="row mt-lg-n10 mt-md-n11 mt-n10">
                     <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
@@ -23,6 +42,7 @@
                             <div class="card-header text-center pt-4">
                                 <h5>Register with</h5>
                             </div>
+                            {{-- Login with social app --}}
                             <div class="row px-xl-5 px-sm-4 px-3">
                                 <div class="col-3 ms-auto px-1">
                                     <a class="btn btn-outline-light w-100" href="javascript:;">
@@ -90,19 +110,41 @@
                                     </p>
                                 </div>
                             </div>
+                            {{-- Register Form --}}
                             <div class="card-body">
-                                <form role="form text-left">
+
+                                <form role="form text-left" method="post" action="{{ route('register.store') }}">
+                                    @csrf
                                     <div class="mb-3">
-                                        <input type="text" class="form-control" placeholder="Name" aria-label="Name"
-                                            aria-describedby="email-addon">
+                                        <x-text-input type="text" name="name" placeholder="Name" aria-label="Name"
+                                            :value="old('name')" />
+                                        <x-input-error :messages="$errors->get('name')" class="mt-2" />
+
                                     </div>
                                     <div class="mb-3">
-                                        <input type="email" class="form-control" placeholder="Email"
-                                            aria-label="Email" aria-describedby="email-addon">
+                                        <x-text-input type="email" name="email" placeholder="Email"
+                                            aria-label="Email" :value="old('email')" />
+                                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
+
                                     </div>
                                     <div class="mb-3">
-                                        <input type="password" class="form-control" placeholder="Password"
-                                            aria-label="Password" aria-describedby="password-addon">
+                                        <x-text-input type="password" name="password" placeholder="Password"
+                                            aria-label="Password" aria-describedby="password-addon" />
+                                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
+
+                                    </div>
+                                    <div class="mb-3">
+                                        <x-text-input type="password" name="re_password" placeholder="Re-Password"
+                                            aria-label="Password" aria-describedby="password-addon" />
+                                        <x-input-error :messages="$errors->get('re_password')" class="mt-2" />
+
+                                    </div>
+                                    <div class="mb-3">
+                                        <select name="role" id="" class="form-control">
+                                            <option value="customer">Customer</option>
+                                            <option value="owner">Owner</option>
+                                        </select>
+                                        <x-input-error :messages="$errors->get('role')" class="mt-2" />
                                     </div>
                                     <div class="form-check form-check-info text-left">
                                         <input class="form-check-input" type="checkbox" value=""
@@ -113,12 +155,14 @@
                                         </label>
                                     </div>
                                     <div class="text-center">
-                                        <button type="button" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign
-                                            up</button>
+                                        <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">
+                                            Sign up
+                                        </button>
                                     </div>
                                     <p class="text-sm mt-3 mb-0">Already have an account? <a href="/login"
                                             class="text-dark font-weight-bolder">Sign in</a></p>
                                 </form>
+
                             </div>
                         </div>
                     </div>

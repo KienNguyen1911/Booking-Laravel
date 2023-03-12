@@ -1,42 +1,65 @@
 <?php
+namespace App\Services;
 
-abstract class BaseService
+use Illuminate\Support\Facades\DB;
+
+class BaseService
 {
     protected $model;
 
-    public function __construct()
+    public function create($params)
     {
-        $this->model = $this->model();
+        return $this->model->create($params);
     }
 
-    abstract public function model();
-
-    public function setModel($model)
+    public function update($id, $params)
     {
-        $this->model = $model;
-    }
+        $model = $this->model->find($id);
+        $model->update($params);
 
-    public function all()
-    {
-        return $this->model->all();
-    }
-
-    public function store($data)
-    {
-        return $this->model->create($data);
-    }
-
-    public function update($id, $data)
-    {
-        $record = $this->model->find($id);
-        $record->update($data);
-        return $record;
+        return $this->model->find($id);
     }
 
     public function delete($id)
     {
-        $record = $this->model->find($id);
-        $record->delete();
-        return $record;
+        $item = $this->find($id);
+
+        return $item ? $item->delete() : true;
+    }
+
+    public function find($id, $with = null)
+    {
+        $query = $this->model;
+        if ($with) {
+            $query = $query->with($with);
+        }
+
+        return $query->find($id);
+    }
+
+    public function deleteMore($ids)
+    {
+        return $this->model->destroy($ids);
+    }
+
+    public function deleteList($params)
+    {
+        try {
+            DB::beginTransaction();
+
+            foreach ($params['ids'] as $id) {
+                $this->delete($id);
+            }
+
+            DB::commit();
+
+            return true;
+        } catch (\Exception $e) {
+            DB::rollBack();
+
+            // \Log::debug($e);
+
+            return false;
+        }
     }
 }

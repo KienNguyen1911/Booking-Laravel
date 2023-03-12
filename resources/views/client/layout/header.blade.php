@@ -1,7 +1,6 @@
 <style>
     .active {
         border: 1px solid white;
-        /* border-color: #007bff; */
         border-radius: 8px;
     }
 </style>
@@ -39,17 +38,35 @@
                     </ul>
                 </li> --}}
                 <li @class(['active' => request()->routeIs('services')])>
-                    <x-nav-link :href="route('services')" >Services</x-nav-link>
+                    <x-nav-link :href="route('services')">Services</x-nav-link>
                 </li>
                 <li @class(['active' => request()->routeIs('about')])>
-                    <x-nav-link :href="route('about')" >About</x-nav-link>
+                    <x-nav-link :href="route('about')">About</x-nav-link>
                 </li>
                 <li @class(['active' => request()->routeIs('contact')])>
-                    <x-nav-link :href="route('contact')" >Contact Us</x-nav-link>
+                    <x-nav-link :href="route('contact')">Contact Us</x-nav-link>
                 </li>
-                <li>
-                    <x-nav-link :href="route('login')">Login</x-nav-link>
-                </li>
+                @if (Auth::check())
+                    <li class="has-children">
+                        <a href="#">{{ Auth::user()->name }}</a>
+                        <ul class="dropdown">
+                            <li><a href="/elements">Elements</a></li>
+                            <li><a href="/elements">Wish List</a></li>
+                            <li><a href="/elements">Your Orders</a></li>
+                            @if (Auth::user()->role == 'admin')
+                                <li><a href="{{ route('dashboard') }}" target="_blank">Go to Dashboard</a></li>
+                            @endif
+                            @if (Auth::user()->role == 'owner' || Auth::user()->role == 'admin')
+                                <li><a href="#">Post Your Home</a></li>
+                            @endif
+                            <li><a href="/logout">Sign Out</a></li>
+                        </ul>
+                    </li>
+                @else
+                    <li>
+                        <x-nav-link :href="route('login')">Login</x-nav-link>
+                    </li>
+                @endif
             </ul>
 
             <a href="#"

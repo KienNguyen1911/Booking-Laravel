@@ -26,7 +26,7 @@
                                             </div>
                                         </div>
                                         <div class="ms-auto w-20 d-flex align-items-end justify-content-end">
-                                            <img class="w-60 mt-2" src="admin/img/logos/mastercard.png" alt="logo">
+                                            <img class="w-60 mt-2" src="img/logos/mastercard.png" alt="logo">
                                         </div>
                                     </div>
                                 </div>
@@ -87,7 +87,7 @@
                                     <div class="col-md-6 mb-md-0 mb-4">
                                         <div
                                             class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
-                                            <img class="w-10 me-3 mb-0" src="admin/img/logos/mastercard.png" alt="logo">
+                                            <img class="w-10 me-3 mb-0" src="img/logos/mastercard.png" alt="logo">
                                             <h6 class="mb-0">
                                                 ****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;7852
                                             </h6>
@@ -98,7 +98,7 @@
                                     <div class="col-md-6">
                                         <div
                                             class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
-                                            <img class="w-10 me-3 mb-0" src="admin/img/logos/visa.png" alt="logo">
+                                            <img class="w-10 me-3 mb-0" src="img/logos/visa.png" alt="logo">
                                             <h6 class="mb-0">
                                                 ****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;5248
                                             </h6>
