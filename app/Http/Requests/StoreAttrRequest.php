@@ -13,7 +13,7 @@ class StoreAttrRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,15 @@ class StoreAttrRequest extends FormRequest
     {
         return [
             //
+            'name' => 'required| max:50 | unique:attrs'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Attribute name is required',
+            'name.unique' => 'Attribute name already exists'
         ];
     }
 }

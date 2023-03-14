@@ -16,6 +16,7 @@
         @yield('tables')
 
         @yield('attributes.index')
+        @yield('attributes.edit')
     </main>
     @include('admin.layout.ui-configurator')
 

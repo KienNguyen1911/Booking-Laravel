@@ -7,6 +7,8 @@
     <meta name="author" content="Untree.co">
     <link rel="shortcut icon" href="favicon.png">
 
+    <link rel="icon" type="image/png" href="admin/img/favicon.png">
+
     <meta name="description" content="" />
     <meta name="keywords" content="bootstrap, bootstrap4" />
 
@@ -26,7 +28,7 @@
     <link rel="stylesheet" href="client/css/aos.css">
     <link rel="stylesheet" href="client/css/style.css">
 
-    <title>Tour Free Bootstrap Template for Travel Agency by Untree.co</title>
+    <title>Tour </title>
 
 </head>
 

@@ -13,7 +13,7 @@ class UpdateAttrRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,22 @@ class UpdateAttrRequest extends FormRequest
     {
         return [
             //
+            'name' => 'required|string|max:255|unique:attrs' . $this->id,
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Attribute name is required',
+            'name.unique' => 'Attribute name already exists',
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'name' => 'Attribute name',
         ];
     }
 }
