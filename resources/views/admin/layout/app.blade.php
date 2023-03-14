@@ -14,6 +14,8 @@
         @yield('billing')
         @yield('profile')
         @yield('tables')
+
+        @yield('attributes.index')
     </main>
     @include('admin.layout.ui-configurator')
 

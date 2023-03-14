@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AttrController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/tables', [AdminController::class, 'tables'])->name('tables');
     Route::get('/billing', [AdminController::class, 'billing'])->name('billing');
     Route::get('/profile', [AdminController::class, 'profile'])->name('profile');
+
+    Route::resource('attributes', AttrController::class);
 });
 
 Route::view('/services', 'client.pages.services')->name('services');
